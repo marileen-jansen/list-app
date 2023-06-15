@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Box, Paper, Typography, Tooltip, Container, Avatar, Button, Collapse } from '@mui/material';
-import { TrendingUp, StarBorder, Block } from '@mui/icons-material';
+import { TrendingUp, StarBorder, Block, Star } from '@mui/icons-material';
 
-const Item = ({ data }) => {
-    const { display_name, reputation, profile_image } = data;
+const Item = ({ data, onFollow, onBlock }) => {
+    const { user_id, display_name, reputation, profile_image, is_followed, is_blocked } = data;
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -16,7 +16,8 @@ const Item = ({ data }) => {
         sx={{
             width: '100%',
             height: 'auto',
-            cursor: 'pointer',
+            cursor: is_blocked ? 'cursor' : 'pointer',
+            opacity: is_blocked ? 0.5 : 1,
         }}
         onClick={handleExpandClick}
     >
@@ -28,7 +29,7 @@ const Item = ({ data }) => {
                 '&:hover': {
                     backgroundColor: '#FAFAFA',
                 },
-                cursor: 'pointer',
+                cursor: is_blocked ? 'cursor' : 'pointer',
                 padding: '10px'
             }}
         >
@@ -46,7 +47,11 @@ const Item = ({ data }) => {
                     }}
                 >
                     <Typography variant="h5">{display_name}</Typography>
+
                 </Container>
+                {
+                    is_followed ? <Star color='primary' /> : null
+                }
                 <Tooltip title="Reputation" placement="bottom" arrow>
                     <Container
                         sx={{
@@ -69,21 +74,35 @@ const Item = ({ data }) => {
                 >
                     <Tooltip title="Follow user" placement="bottom" arrow>
                         <Button
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                onFollow(user_id);
+                            }}
                             sx={{ margin: '5px' }}
                             startIcon={<StarBorder />}
                             variant="contained"
+                            disabled={is_blocked}
                         >
-                            Follow
+                            {
+                                is_followed ? 'Unfollow' : 'Follow'
+                            }
                         </Button>
                     </Tooltip>
                     <Tooltip title="Block user" placement="bottom" arrow>
                         <Button
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                setExpanded(false);
+                                onBlock(user_id);
+                            }}
                             sx={{ margin: '5px' }}
                             startIcon={<Block />}
                             variant="contained"
                             color='secondary'
                         >
-                            Block
+                            {
+                                is_blocked ? 'Unblock' : 'Block'
+                            }
                         </Button>
                     </Tooltip>
                 </Container>
