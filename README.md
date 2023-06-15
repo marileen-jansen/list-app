@@ -26,10 +26,12 @@ Follow these steps to install and set up your ReactJS application:
 
 - Review - 10 min
 - Design - 10 min
-- Implementation - 1 hour
-- Testing - 2 hours
+- Implementation - 2 hours
+- Testing - 1 hour
 - Documentation - 10 min
 
 ## Other information
 
 I deliberately not disable the tile when a user is blocked, otherwise there is no way to un-block the user.
+
+Due to time-constraints I was not able to implement any other features. Testing took a whole while for not much because I'm not proficient in testing.
