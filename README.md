@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Getting Started with this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This guide will walk you through the steps required to install a ReactJS application on your local machine. ReactJS is a popular JavaScript library for building user interfaces.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before proceeding with the installation, ensure that you have the following prerequisites installed on your system:
 
-### `npm start`
+1. Node.js (version 14 or above) - You can download it from the official Node.js website: https://nodejs.org
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation Steps
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow these steps to install and set up your ReactJS application:
 
-### `npm test`
+1. Clone the repository: Begin by cloning the repository of the ReactJS application you want to install. You can use Git to clone the repository, or you can download the project as a ZIP file and extract it to a local directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory: Open a terminal or command prompt and navigate to the root directory of the cloned ReactJS application.
 
-### `npm run build`
+3. Install dependencies: In the project directory, run the following command to install the required dependencies using npm (Node Package Manager): `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server: After the dependencies are installed, you can start the development server by running the following command: `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Access the application: Open your web browser and navigate to http://localhost:3000 (or the appropriate URL if specified differently). You should now see the ReactJS application running successfully.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Timeline
 
-### `npm run eject`
+- Review - 10 min
+- Design - 10 min
+- Implementation - 1 hour
+- Testing - 2 hours
+- Documentation - 10 min
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Other information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I deliberately not disable the tile when a user is blocked, otherwise there is no way to un-block the user.
